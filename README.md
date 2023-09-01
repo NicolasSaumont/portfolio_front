@@ -23,23 +23,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/NicolasSaumont/portfolio">
-    <img src="public/favicon.ico" alt="Logo" width="80" height="80">
+  <a href="https://github.com/NicolasSaumont/portfolio_front">
+    <img src="./assets/img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Nicolas Saumont's Portfolio</h3>
+<h3 align="center">Nicolas Saumont's Portfolio | Frontend</h3>
 
   <p align="center">
     Have a clear overview of all my projects !
     <br />
-    <a href="https://github.com/NicolasSaumont/portfolio"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/NicolasSaumont/portfolio_front"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/NicolasSaumont/portfolio">View Demo</a>
+    <a href="https://github.com/NicolasSaumont/portfolio_front">View Demo</a>
     ·
-    <a href="https://github.com/NicolasSaumont/portfolio/issues">Report Bug</a>
+    <a href="https://github.com/NicolasSaumont/portfolio_front/issues">Report Bug</a>
     ·
-    <a href="https://github.com/NicolasSaumont/portfolio/pulls">Request Feature</a>
+    <a href="https://github.com/NicolasSaumont/portfolio_front/pulls">Request Feature</a>
   </p>
 </div>
 
@@ -79,15 +79,17 @@
 
 This website is the portfolio of Nicolas Saumont, showing his skills and accomplishments. It creatively and visually presents his work in web development and interface design, demonstrating his expertise and style through various projects and experiences.
 
+*Warning : This repo is about the frontend application. If you want to access the backend project, please [click here](https://github.com/NicolasSaumont/portfolio_back_API).*
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
 
-* [![Node][Node.js]][Node-url]
-* [![Express][Express.js]][Express-url]
-* [![EJS][EJS.js]][EJS-url]
+* [![ESLint][ESLint.js]][ESLint-url]
+* [![Vite][Vite.js]][Vite-url]
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -108,8 +110,8 @@ Please visit https://www.portfolio.nicolassaumont.com or click on [this link](ht
 ### Execution
 
 - Navigate to the project's root directory.
-- Run the application using: `npm start`
-- Open a browser and go to `http://localhost:3000` to access the game.
+- Run the application using: `npm run start`
+- Open a browser and go to `http://localhost:5173` to access the app.
 
 
 
@@ -120,12 +122,17 @@ Please visit https://www.portfolio.nicolassaumont.com or click on [this link](ht
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Project set up
-- [x] Database set up
-- [x] Database seeding
+
+- [ ] Homepage
+- [ ] List of sites
+- [ ] Site's détails
+- [ ] Back office
+  - [ ] Create new website
+  - [ ] Edit website
+  - [ ] Delete website
   
 
-See the [open issues](https://github.com/NicolasSaumont/portfolio/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/NicolasSaumont/portfolio_front/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,7 +170,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Nicolas Saumont - [@NicolasSaumont](https://twitter.com/NicolasSaumont) - saumont.nicolas@gmail.com
 
-Project Link: [https://github.com/NicolasSaumont/portfolio](https://github.com/NicolasSaumont/portfolio)
+Project Link: [https://github.com/NicolasSaumont/portfolio](https://github.com/NicolasSaumont/portfolio_front)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -182,22 +189,20 @@ Project Link: [https://github.com/NicolasSaumont/portfolio](https://github.com/N
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/NicolasSaumont/portfolio.svg?style=for-the-badge
-[contributors-url]: https://github.com/NicolasSaumont/portfolio/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/NicolasSaumont/portfolio.svg?style=for-the-badge
-[forks-url]: https://github.com/NicolasSaumont/portfolio/network/members
-[stars-shield]: https://img.shields.io/github/stars/NicolasSaumont/portfolio.svg?style=for-the-badge
-[stars-url]: https://github.com/NicolasSaumont/portfolio/stargazers
-[issues-shield]: https://img.shields.io/github/issues/NicolasSaumont/portfolio.svg?style=for-the-badge
-[issues-url]: https://github.com/NicolasSaumont/portfolio/issues
-[license-shield]: https://img.shields.io/github/license/NicolasSaumont/portfolio.svg?style=for-the-badge
-[license-url]: https://github.com/NicolasSaumont/portfolio/blob/main/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/NicolasSaumont/portfolio_front.svg?style=for-the-badge
+[contributors-url]: https://github.com/NicolasSaumont/portfolio_front/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/NicolasSaumont/portfolio_front.svg?style=for-the-badge
+[forks-url]: https://github.com/NicolasSaumont/portfolio_front/network/members
+[stars-shield]: https://img.shields.io/github/stars/NicolasSaumont/portfolio_front.svg?style=for-the-badge
+[stars-url]: https://github.com/NicolasSaumont/portfolio_front/stargazers
+[issues-shield]: https://img.shields.io/github/issues/NicolasSaumont/portfolio_front.svg?style=for-the-badge
+[issues-url]: https://github.com/NicolasSaumont/portfolio_front/issues
+[license-shield]: https://img.shields.io/github/license/NicolasSaumont/portfolio_front.svg?style=for-the-badge
+[license-url]: https://github.com/NicolasSaumont/portfolio_front/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/nicolas-saumont
-[product-screenshot]: public/img/screenshot.png
-[Node.js]: https://img.shields.io/badge/node.js-f41a36?style=for-the-badge&logo=Node.js&logoColor=white
-[Node-url]: https://nodejs.org/fr
-[EJS.js]: https://img.shields.io/badge/ejs.js-000000?style=for-the-badge&logo=ejs&logoColor=white
-[EJS-url]: https://ejs.co/
-[Express.js]: https://img.shields.io/badge/express.js-35495E?style=for-the-badge&logo=express&logoColor=4FC08D
-[Express-url]: https://expressjs.com/
+[product-screenshot]: ./assets/img/screenshot.png
+[ESLint.js]: https://img.shields.io/badge/eslint-yellow?style=for-the-badge&logo=eslint
+[ESLint-url]: https://eslint.org/
+[Vite.js]: https://img.shields.io/badge/vite-21af90?style=for-the-badge&logo=vite
+[Vite-url]: https://vitejs.dev/
