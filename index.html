@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
+  <title>Portfolio</title>
+</head>
+<body>
+  <div class="container">
+
+    <h1 class="main_title">Portfolio Nicolas Saumont</h1>
+
+    <header>
+        <div class="row">
+          <div class="col logo">
+            <img src="images/logo.png" alt="logo nicolas saumont">
+          </div>
+          <div class="col mobile">
+            <nav id="main_menu">
+              <div class="toggle">
+                <i class="fa-solid fa-bars menu-projects open"></i>
+                <i class="fa-regular fa-circle-xmark menu-projects close"></i>
+              </div>
+              <ul class="navbar-nav">
+                <h3>Projects</h3>
+                <ul class="projects">
+                  <li class="project-item project-item--cv_adventure">CV Adventure</li>
+                  <li class="project-item project-item--mystical_forest">Mystical Forest</li>
+                  <li class="project-item project-item--memory_game">Memory Game</li>
+                  <li class="project-item project-item--ezee">Ezee</li>
+                  <li class="project-item project-item--fran">Fran</li>
+                  <li class="project-item project-item--top_5_video_games">Top 5 video games</li>
+                </ul>
+              </ul>
+            </nav>
+          </div>
+          <div class="col external_links desktop">
+            <a href="https://github.com/NicolasSaumont" class="external_link" target="_blank"><img src="images/github.png" alt="logo github"></a>
+            <a href="https://www.linkedin.com/in/nicolas-saumont/" class="external_link" target="_blank"><img src="images/linkedin.png" alt="logo linkedin"></a>
+          </div>
+        </div>
+    </header>
+
+    <section class="images desktop">
+      <div class="row images--cv_adventure visuallyhidden">
+        <img src="images/cv_adventure--image-1.png" alt="first illustration of the site cv adventure">
+        <img src="images/cv_adventure--image-2.png" alt="second illustration of the site cv adventure">
+        <img src="images/cv_adventure--image-3.png" alt="third illustration of the site cv adventure">
+      </div>
+      <div class="row images--mystical_forest visuallyhidden">
+        <img src="images/mystical_forest--image-1.png" alt="first illustration of the site mystical forest">
+        <img src="images/mystical_forest--image-2.png" alt="second illustration of the site mystical forest">
+        <img src="images/mystical_forest--image-3.png" alt="third illustration of the site mystical forest">
+      </div>
+      <div class="row images--memory_game visuallyhidden">
+        <img src="images/memory--image-1.png" alt="first illustration of the site memory game">
+        <img src="images/memory--image-2.png" alt="second illustration of the site memory game">
+        <img src="images/memory--image-3.png" alt="third illustration of the site memory game">
+      </div>
+      <div class="row images--ezee visuallyhidden">
+        <img src="images/ezee--image-1.png" alt="first illustration of the site ezee">
+        <img src="images/ezee--image-2.png" alt="second illustration of the site ezee">
+        <img src="images/ezee--image-3.png" alt="third illustration of the site ezee">
+      </div>
+      <div class="row images--fran visuallyhidden">
+        <img src="images/fran--image-1.png" alt="first illustration of the site fran">
+        <img src="images/fran--image-2.png" alt="second illustration of the site fran">
+        <img src="images/fran--image-3.png" alt="second illustration of the site fran">
+      </div>
+      <div class="row images--top_5_video_games visuallyhidden">
+        <img src="images/top_5_video_games--image-1.png" alt="first illustration of the site top 5 video games">
+        <img src="images/top_5_video_games--image-2.png" alt="second illustration of the site top 5 video games">
+        <img src="images/top_5_video_games--image-3.png" alt="second illustration of the site top 5 video games">
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="row">
+        <div class="col home active">
+          <h2>Hello there!</h2>
+
+          <div class="home-presentation">
+            <p>My name is Nicolas Saumont, I'm a front-end developer based in Plerin, Brittany, France. I have developed many type of front-ends, mostly for fun for now, because I'm new to this and I like fun!</p>
+            <br>
+            <p>And as a great philosopher once said: "Working hard, knowing how to have fun, that's the secret of success".</p>
+          </div>
+        </div>
+
+        <div class="col project project--cv_adventure">
+          <h4>CV Adventure</h4>
+
+          <div class="project-presentation">
+            <div class="images mobile">
+              <div class="row cv_adventure--images">
+                <img src="images/cv_adventure--image-1.png" alt="first illustration of the site cv adventure">
+              </div>
+            </div>
+
+            <p>Discover my career path in a playful way thanks to this innovative <strong>CV site</strong>: a retro arcade game experience that lets you navigate through the different stages of my career while having fun. </p>
+            <br>
+            <p>Immerse yourself in this unique experience of discovering a web developer in search of opportunities, while exploring my background and skills.</p>
+            <br>
+            <p><strong>***Warning: this website is not suitable for mobile phones and tablets yet***</strong></p>
+            
+            <ul class="technos">
+              <li class="techno">#html</li>
+              <li class="techno">#css</li>
+              <li class="techno">#javascript</li>
+              <li class="techno">#nodejs</li>
+              <li class="techno">#express</li>
+            </ul>
+            <div class="external_links">
+              <a href="https://cv-adventure.nicolassaumont.com/" class="external_link" target="_blank"><p>View Site</p></a>
+              <a href="https://github.com/NicolasSaumont/cv_adventure" class="external_link" target="_blank"><p>Github</p></a>
+            </div>
+
+            <div class="images mobile">
+              <div class="row mystical_forest--images">
+                <img src="images/cv_adventure--image-2.png" alt="second illustration of the site cv adventure">
+                <img src="images/cv_adventure--image-3.png" alt="third illustration of the site cv adventure">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col project project--mystical_forest">
+          <h4>Mystical Forest</h4>
+
+          <div class="project-presentation">
+            <div class="images mobile">
+              <div class="row mystical_forest--images">
+                <img src="images/mystical_forest--image-1.png" alt="first illustration of the site mystical forest">
+              </div>
+            </div>
+
+            <p><strong>Mystical Forest</strong> is an interactive website that offers a unique, immersive experience of storytelling. Visitors can explore a magical forest and engage with the environment through various interactive features such as puzzles, choices, and hidden surprises.</p>
+            <br>
+            <p>The website features an original story by artist and writer, Nicolas Saumont. <strong>Mystical Forest</strong> aims to inspire a sense of wonder and curiosity for this enchanted world, and is suitable for adults and teenagers.</p>
+            <ul class="technos">
+              <li class="techno">#html</li>
+              <li class="techno">#css</li>
+              <li class="techno">#javascript</li>
+              <li class="techno">#jquery</li>
+            </ul>
+            <div class="external_links">
+              <a href="https://mysticalforest.nicolassaumont.com/" class="external_link" target="_blank"><p>View Site</p></a>
+              <a href="https://github.com/NicolasSaumont/mysticalForest" class="external_link" target="_blank"><p>Github</p></a>
+            </div>
+
+            <div class="images mobile">
+              <div class="row mystical_forest--images">
+                <img src="images/mystical_forest--image-2.png" alt="second illustration of the site mystical forest">
+                <img src="images/mystical_forest--image-3.png" alt="third illustration of the site mystical forest">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col project project--memory_game">
+          <h4>Memory Game</h4>
+
+          <div class="project-presentation">
+            <div class="images mobile">
+              <div class="row memory_game--images">
+                <img src="images/memory--image-1.png" alt="first illustration of the site memory game">
+              </div>
+            </div>
+
+            <p>Embark on an exciting memory journey with this unique One Piece <strong>Memory Game</strong>! Immerse yourself in the captivating world of the One Piece manga as you challenge your memory and recollection skills. </p>
+            <br>
+            <p>This interactive memory game features beloved characters, iconic scenes, and thrilling moments from the epic series. Test your abilities by matching pairs and unravel the adventures of Luffy and his crew. Join the fun and relive the magic of One Piece through this engaging and entertaining <strong>memory game</strong>.</p>
+            <ul class="technos">
+              <li class="techno">#html</li>
+              <li class="techno">#css</li>
+              <li class="techno">#javascript</li>
+            </ul>
+            <div class="external_links">
+              <a href="https://memory.nicolassaumont.com/" class="external_link" target="_blank"><p>View Site</p></a>
+              <a href="https://github.com/NicolasSaumont/memory" class="external_link" target="_blank"><p>Github</p></a>
+            </div>
+
+            <div class="images mobile">
+              <div class="row memory_game--images">
+                <img src="images/memory--image-2.png" alt="second illustration of the site memory game">
+                <img src="images/memory--image-3.png" alt="third illustration of the site memory game">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col project project--ezee">
+          <h4>Ezee</h4>
+
+          <div class="project-presentation">
+            <div class="images mobile">
+              <div class="row ezee--images">
+                <img src="images/ezee--image-1.png" alt="first illustration of the site ezee">
+              </div>
+            </div>
+
+            <p><strong>Accompagner les Entrepreneurs</strong> is a French website that offers resources and support for entrepreneurs and small business owners. The website provides a variety of tools and services to help entrepreneurs grow their businesses, including training, coaching, and networking opportunities.</p>
+            <br>
+            <p>Additionally, <strong>Accompagner les Entrepreneurs</strong> features a blog with articles and insights on business strategy, marketing, and management. The website is designed to help entrepreneurs at all stages of their journey, from idea to implementation and growth.</p>
+            <ul class="technos">
+              <li class="techno">#wordpress</li>
+              <li class="techno">#newsletter</li>
+              <li class="techno">#onlinestore</li>
+            </ul>
+            <div class="external_links">
+              <a href="https://www.accompagnerlesentrepreneurs.com/" class="external_link" target="_blank"><p>View Site</p></a>
+              <a href="https://github.com/NicolasSaumont" class="external_link" target="_blank"><p>Github</p></a>
+            </div>
+
+            <div class="images mobile">
+              <div class="row ezee--images">
+                <img src="images/ezee--image-2.png" alt="second illustration of the site ezee">
+                <img src="images/ezee--image-3.png" alt="third illustration of the site ezee">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col project project--fran">
+          <h4>Fran</h4>
+
+          <div class="project-presentation">
+            <div class="images mobile">
+              <div class="row fran--images">
+                <img src="images/fran--image-1.png" alt="first illustration of the site fran">
+              </div>
+            </div>
+
+            <p><strong>Fran</strong> is a fake website made by Nicolas Saumont, which mimic a travel agency website that offers travel inspiration, tips, and stories from around the world. The website features beautiful photography and detailed accounts of the author's adventures, as well as practical advice on travel planning and budgeting.</p>
+            <ul class="technos">
+              <li class="techno">#html</li>
+              <li class="techno">#css</li>
+            </ul>
+            <div class="external_links">
+              <a href="https://www.travel.nicolassaumont.com/" class="external_link" target="_blank"><p>View Site</p></a>
+              <a href="https://github.com/NicolasSaumont/travel" class="external_link" target="_blank"><p>Github</p></a>
+            </div>
+
+            <div class="images mobile">
+              <div class="row fran--images">
+                <img src="images/fran--image-2.png" alt="second illustration of the site fran">
+                <img src="images/fran--image-3.png" alt="second illustration of the site fran">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col project project--top_5_video_games">
+
+          <h4>Top 5 Video Games</h4>
+          <div class="project-presentation">
+            <div class="images mobile">
+              <div class="row top_5_video_games--images">
+                <img src="images/top_5_video_games--image-1.png" alt="first illustration of the site top 5 video games">
+              </div>
+            </div>
+
+            <p>This website offers a list of the top five best games ever made, according to the author. The website provides a brief overview of each game, including its genre, gameplay mechanics, and what makes it so great. The list includes a variety of games from different eras and platforms, ranging from classic arcade games to modern video games.</p>
+            <br>
+            <p>It's a great resource for gamers looking for new games to try or for those interested in exploring the best games of all time.</p>
+            <ul class="technos">
+              <li class="techno">#html</li>
+              <li class="techno">#css</li>
+              <li class="techno">#javascript</li>
+              <li class="techno">#jquery</li>
+            </ul>
+            <div class="external_links">
+              <a href="https://www.games.nicolassaumont.com/" class="external_link" target="_blank"><p>View Site</p></a>
+              <a href="https://github.com/NicolasSaumont/bestGames" class="external_link" target="_blank"><p>Github</p></a>
+            </div>
+
+            <div class="images mobile">
+              <div class="row top_5_video_games--images">
+                <img src="images/top_5_video_games--image-2.png" alt="second illustration of the site top 5 video games">
+                <img src="images/top_5_video_games--image-3.png" alt="second illustration of the site top 5 video games">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col spacer desktop"></div>
+
+        <div class="col projects desktop">
+          <h3>Projects</h3>
+          <ul class="">
+            <li class="project-item project-item--cv_adventure">CV Adventure</li>
+            <li class="project-item project-item--mystical_forest">Mystical Forest</li>
+            <li class="project-item project-item--memory_game">Memory Game</li>
+            <li class="project-item project-item--ezee">Ezee</li>
+            <li class="project-item project-item--fran">Fran</li>
+            <li class="project-item project-item--top_5_video_games">Top 5 video games</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row">
+        <div class="col">
+          <p>©2023, Nicolas Saumont. <a href="https://nicolassaumont.com/" target="_blank">nicolassaumont.com</a></p>
+        </div>
+        <div class="col external_links mobile">
+            <a href="https://github.com/NicolasSaumont" class="external_link" target="_blank"><img src="images/github.png" alt="logo github"></a>
+            <a href="https://www.linkedin.com/in/nicolas-saumont-241422117/" class="external_link" target="_blank"><img src="images/linkedin.png" alt="logo linkedin"></a>
+          </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
