@@ -1,0 +1,18 @@
+{
+  "name": "portfolio_front",
+  "description": "<!-- *** Thanks for checking out the project 'Nicolas Saumont's Portfolio'. If you have a suggestion *** that would make this better, please fork the repo and create a pull request *** or simply open an issue with the tag \"enhancement\". *** Don't forget to give the project a star! *** Thanks again! :D -->",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.48.0",
+    "vite": "^4.4.9"
+  }
+}

@@ -108,7 +108,7 @@ img:hover {
   display: block;
 }
 
-.navbar-nav {
+.main-menu_items {
   position: fixed;
   top: 0;
   left: 0;
@@ -125,21 +125,21 @@ img:hover {
   border-radius: 5px;
 }
 
-.toggle_menu_on .navbar-nav {
+.toggle_menu_on .main-menu_items {
   transform: translateX(0%);
 }
 
-.navbar-nav .project-item {
+.main-menu_item {
   margin: 1.5em 0;
 }
 
-.project-item:hover:not(.active) {
+.main-menu_item:hover:not(.active) {
   letter-spacing: 0.15em;
   text-decoration: underline #d33f49;
   cursor: pointer;
 }
 
-.project-item.active {
+.main-menu_item.active {
   text-decoration: underline #fcaf01;
 }
 
