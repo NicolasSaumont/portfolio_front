@@ -97,11 +97,10 @@ img:hover {
   top: 5%;
   left: 50%;
   transform: translate(-50%);
-  display: none;
 }
 
-.is-active {
-  display: block;
+.is-hidden {
+  display: none;
 }
 
 .menu-projects {

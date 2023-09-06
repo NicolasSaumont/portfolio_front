@@ -4,7 +4,7 @@ export async function closeNotification() {
 
   document.querySelectorAll('.notification').forEach(notification => {
 
-    notification.classList.remove('is-active');
+    notification.classList.add('is-hidden');
 
   });
 }

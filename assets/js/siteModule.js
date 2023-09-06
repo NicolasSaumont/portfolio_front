@@ -16,7 +16,7 @@ export async function loadSites() {
     });
   } else {
     
-    document.querySelectorAll('.notification').classList.add('is-active');
+    document.querySelectorAll('.notification').classList.remove('is-hidden');
 
   }
 }
