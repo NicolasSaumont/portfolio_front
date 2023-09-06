@@ -8,17 +8,21 @@ function init() {
 }
 
 function listenUserActions() {
-
-  // Toggle main menu on icons
-  document.querySelector('.main-menu_icons').addEventListener('click', toggleMainMenu);
   
-  // Toggle main menu on menu items
-  document.querySelector('.main-menu_item').addEventListener('click', toggleMainMenu);
+  // Toggle mobile main menu
+  document.querySelectorAll('.main-menu_item, .main-menu_icons').forEach(menuItem => {
+    
+    menuItem.addEventListener('click', toggleMainMenu);
 
+  });
+  
   // Load site
-  document.querySelector('.main-menu_item').addEventListener('click', loadSite);
-  document.querySelector('.project-item').addEventListener('click', loadSite);
-  
+  document.querySelectorAll('.main-menu_item, .project-item').forEach(menuItem => {
+    
+    menuItem.addEventListener('click', loadSite);
+
+  });
+    
 }
 
 init();
