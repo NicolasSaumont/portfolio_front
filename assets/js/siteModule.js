@@ -1,4 +1,4 @@
-import { apiBaseUrl } from './utilsModule.js';
+import { apiBaseUrl, hideHomepage } from './utilsModule.js';
 import { toggleMainMenu } from './menuModule.js';
 
 export async function loadSites() {
@@ -27,7 +27,7 @@ export async function loadSiteDetails(siteData) {
 
   if (response.ok) {
 
-    document.querySelector('.home').classList.add('is-hidden');
+    hideHomepage();
 
     document.querySelectorAll('[slot="site-id"]').forEach(name => {
 
@@ -41,9 +41,9 @@ export async function loadSiteDetails(siteData) {
 
     });
 
-    const site = await response.json();
+    const siteData = await response.json();
 
-    console.log(document.querySelector(`[data-id="${siteData.id}"]`));
+    addSiteDetailsToDom(siteData);
 
   } else {
     
@@ -55,38 +55,48 @@ export async function loadSiteDetails(siteData) {
 
 function addSiteNameToDom(siteData) {
 
-  // Desktop
-  const projectMenuItemTemplate = document.getElementById('project_item-template');
+  if (siteData.top_site === true) {
 
-  const cloneProjectMenuItem = projectMenuItemTemplate.content.cloneNode(true);
+    // Desktop
+    const projectMenuItemTemplate = document.getElementById('project_item-template');
 
-  cloneProjectMenuItem.querySelector('[slot="site-name"]').textContent = siteData.name;
-  cloneProjectMenuItem.querySelector('[slot="site-id"]').dataset.id = siteData.id; 
+    const cloneProjectMenuItem = projectMenuItemTemplate.content.cloneNode(true);
 
-  cloneProjectMenuItem.querySelector('[slot="site-name"]').addEventListener('click', () => {
-    loadSiteDetails(siteData);
-  });
+    cloneProjectMenuItem.querySelector('[slot="site-name"]').textContent = siteData.name;
+    cloneProjectMenuItem.querySelector('[slot="site-id"]').dataset.id = siteData.id; 
 
-  const desktopReferenceNode = document.querySelector('.projects.desktop .see-all');
+    cloneProjectMenuItem.querySelector('[slot="site-name"]').addEventListener('click', () => {
+      loadSiteDetails(siteData);
+    });
 
-  document.querySelector('.project-items').append(cloneProjectMenuItem, desktopReferenceNode);
+    const desktopReferenceNode = document.querySelector('.projects.desktop .see-all');
 
-  // Mobile
-  const mainMenuItemTemplate = document.getElementById('main-menu_item-template');
+    document.querySelector('.project-items').append(cloneProjectMenuItem, desktopReferenceNode);
 
-  const cloneMainMenuItem = mainMenuItemTemplate.content.cloneNode(true);
+    // Mobile
+    const mainMenuItemTemplate = document.getElementById('main-menu_item-template');
 
-  cloneMainMenuItem.querySelector('[slot="site-name"]').textContent = siteData.name;
-  cloneMainMenuItem.querySelector('[slot="site-id"]').dataset.id = siteData.id; 
+    const cloneMainMenuItem = mainMenuItemTemplate.content.cloneNode(true);
 
-  cloneMainMenuItem.querySelector('[slot="site-name"]').addEventListener('click', () => {
-    loadSiteDetails(siteData);
-  });
+    cloneMainMenuItem.querySelector('[slot="site-name"]').textContent = siteData.name;
+    cloneMainMenuItem.querySelector('[slot="site-id"]').dataset.id = siteData.id; 
 
-  cloneMainMenuItem.querySelector('[slot="site-name"]').addEventListener('click', toggleMainMenu);
+    cloneMainMenuItem.querySelector('[slot="site-name"]').addEventListener('click', () => {
+      loadSiteDetails(siteData);
+    });
 
-  const mobileReferenceNode = document.querySelector('.projects.mobile .see-all');
+    cloneMainMenuItem.querySelector('[slot="site-name"]').addEventListener('click', toggleMainMenu);
 
-  document.querySelector('.main-menu_items').append(cloneMainMenuItem, mobileReferenceNode);
+    const mobileReferenceNode = document.querySelector('.projects.mobile .see-all');
+
+    document.querySelector('.main-menu_items').append(cloneMainMenuItem, mobileReferenceNode);
+
+  }
+
+}
+
+function addSiteDetailsToDom(siteData) {
+
+  
 
 }

@@ -174,18 +174,59 @@
   
 </body>
 
-<!-- Template pour un main-menu_item -->
+<!-- Template Main-menu_item -->
 <template id="main-menu_item-template">
   <li class="main-menu_item" slot="site-id">
     <div id="site-name" slot="site-name"></div>
   </li>
 </template>
 
-<!-- Template pour un project_item -->
+<!-- Template Project_item -->
 <template id="project_item-template">
   <li class="project_item" slot="site-id">
     <div id="site-name" slot="site-name"></div>
   </li>
+</template>
+
+<!-- Template Site details -->
+<template id="site-details">
+  <div class="col project">
+    <h4 class="site-name" slot="site-name"></h4>
+
+    <div class="project-presentation">
+      <div class="images mobile">
+        <div class="row">
+          <!-- 
+            The template first image goes here 
+          -->
+        </div>
+      </div>
+
+      <p class="site-description" slot="site-description"></p>
+      
+      <ul class="technos" slot="site-technos">
+        <!-- 
+          The template site-technos goes here 
+        -->
+      </ul>
+      <div class="external_links">
+        <!-- 
+          The template site_link goes here 
+        -->
+        <!-- 
+          The template github_link goes here 
+        -->
+      </div>
+
+      <div class="images mobile">
+        <div class="row">
+          <!-- 
+            The template last two images goes here 
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 

@@ -14,3 +14,9 @@ export function showHomepage() {
   document.querySelector('.home').classList.remove('is-hidden');
 
 }
+
+export function hideHomepage() {
+
+  document.querySelector('.home').classList.add('is-hidden');
+
+}
