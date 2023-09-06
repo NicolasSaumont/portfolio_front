@@ -92,6 +92,18 @@ img:hover {
   width: 2.1em;
 }
 
+.notification {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  display: none;
+}
+
+.is-active {
+  display: block;
+}
+
 .menu-projects {
   position: relative;
   z-index: 20;

@@ -123,8 +123,8 @@ Please visit https://www.portfolio.nicolassaumont.com or click on [this link](ht
 ## Roadmap
 
 
-- [ ] Homepage
-- [ ] List of sites
+- [x] Homepage
+- [x] List of sites
 - [ ] Site's détails
 - [ ] Back office
   - [ ] Create new website

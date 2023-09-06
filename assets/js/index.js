@@ -1,5 +1,6 @@
 import { loadSites } from './siteModule.js';
 import { toggleMainMenu } from './menuModule.js';
+import { closeNotification } from './utilsModule.js';
 
 function init() {
 
@@ -16,6 +17,11 @@ function listenUserActions() {
     
     menuItem.addEventListener('click', toggleMainMenu);
 
+  });
+
+  // Close notification 
+  document.querySelectorAll('.delete').forEach(deleteButton => {
+    deleteButton.addEventListener('click', closeNotification);
   });
     
 }

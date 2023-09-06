@@ -15,9 +15,9 @@ export async function loadSites() {
 
     });
   } else {
-    // On fait un alerte pour aller vite mais dans la vraie et pour le TP, il faudra quelque chose de plus joli !
-    // Par exemple avec : https://bulma.io/documentation/elements/notification/
-    alert('Oops petit souci côté serveur !');
+    
+    document.querySelectorAll('.notification').classList.add('is-active');
+
   }
 }
 
@@ -40,7 +40,6 @@ export async function loadSiteDetails(siteId) {
 function addSiteNameToDom(siteData) {
 
   // Desktop
-
   const projectMenuItemTemplate = document.getElementById('project_item-template');
 
   const cloneProjectMenuItem = projectMenuItemTemplate.content.cloneNode(true);
@@ -57,7 +56,6 @@ function addSiteNameToDom(siteData) {
   document.querySelector('.project-items').append(cloneProjectMenuItem, desktopReferenceNode);
 
   // Mobile
-
   const mainMenuItemTemplate = document.getElementById('main-menu_item-template');
 
   const cloneMainMenuItem = mainMenuItemTemplate.content.cloneNode(true);
