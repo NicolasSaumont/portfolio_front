@@ -1,9 +1,11 @@
-import { loadSite } from './siteModule.js';
+import { loadSites, loadSiteDetails } from './siteModule.js';
 import { toggleMainMenu } from './menuModule.js';
 
 function init() {
 
   listenUserActions();
+
+  loadSites();
 
 }
 
@@ -17,11 +19,16 @@ function listenUserActions() {
   });
   
   // Load site
-  document.querySelectorAll('.main-menu_item, .project-item').forEach(menuItem => {
+  // document.querySelectorAll('.main-menu_item, .project_item').forEach(menuItem => {
     
-    menuItem.addEventListener('click', loadSite);
+  //   const siteObject = {
+  //     id: Number(menuItem.dataset.id)
+  //   };
 
-  });
+  //   menuItem.addEventListener('click', () => {
+  //     loadSiteDetails(siteObject.id);
+  //   });
+  // });
     
 }
 

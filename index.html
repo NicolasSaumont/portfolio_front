@@ -25,14 +25,14 @@
             <img src="./assets/img/logo.png" alt="logo nicolas saumont">
           </div>
           <div class="col mobile">
-            <nav id="main-menu">
+            <div id="main-menu">
               <div class="toggle main-menu_icons">
                 <i class="fa-solid fa-bars menu-projects open"></i>
                 <i class="fa-regular fa-circle-xmark menu-projects close"></i>
               </div>
-              <ul class="navbar-nav main-menu_items">
+              <nav class="projects mobile">
                 <h3>Projects</h3>
-                <ul class="projects">
+                <ul class="main-menu_items">
                   <li class="main-menu_item main-menu_item--cv_adventure">CV Adventure</li>
                   <li class="main-menu_item main-menu_item--mystical_forest">Mystical Forest</li>
                   <li class="main-menu_item main-menu_item--memory_game">Memory Game</li>
@@ -40,8 +40,9 @@
                   <li class="main-menu_item main-menu_item--fran">Fran</li>
                   <li class="main-menu_item main-menu_item--top_5_video_games">Top 5 video games</li>
                 </ul>
-              </ul>
-            </nav>
+                <p class="see-all">See all</p>
+              </nav>
+            </div>
           </div>
           <div class="col external_links desktop">
             <a href="https://github.com/NicolasSaumont" class="external_link" target="_blank"><img src="./assets/img/github.png" alt="logo github"></a>
@@ -296,13 +297,9 @@
         <nav class="col projects desktop">
           <h3>Projects</h3>
           <ul class="project-items">
-            <li class="project-item project-item--cv_adventure">CV Adventure</li>
-            <li class="project-item project-item--mystical_forest">Mystical Forest</li>
-            <li class="project-item project-item--memory_game">Memory Game</li>
-            <li class="project-item project-item--ezee">Ezee</li>
-            <li class="project-item project-item--fran">Fran</li>
-            <li class="project-item project-item--top_5_video_games">Top 5 video games</li>
+            
           </ul>
+          <p class="see-all">See all</p>
         </nav>
       </div>
     </section>
@@ -320,8 +317,24 @@
     </footer>
 
   </div>
+
+  <script src="./assets/js/index.js" type="module"></script>
+  
 </body>
 
-<script src="./assets/js/index.js" type="module"></script>
+<!-- Template pour un main-menu_item -->
+<template id="main-menu_item-template">
+  <li class="main-menu_item" slot="site-id">
+    <div id="site-name" slot="site-name"></div>
+  </li>
+</template>
+
+<!-- Template pour un project_item -->
+<template id="project_item-template">
+  <li class="project_item" slot="site-id">
+    <div id="site-name" slot="site-name"></div>
+  </li>
+</template>
+
 
 </html>
