@@ -27,11 +27,23 @@ export async function loadSiteDetails(siteData) {
 
   if (response.ok) {
 
-    const site = await response.json();
-
     document.querySelector('.home').classList.add('is-hidden');
 
-    console.log(site);
+    document.querySelectorAll('[slot="site-id"]').forEach(name => {
+
+      name.classList.remove('active');
+
+    });
+
+    document.querySelectorAll(`[data-id="${siteData.id}"]`).forEach(name => {
+
+      name.classList.add('active');
+
+    });
+
+    const site = await response.json();
+
+    console.log(document.querySelector(`[data-id="${siteData.id}"]`));
 
   } else {
     

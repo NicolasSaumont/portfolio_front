@@ -159,7 +159,7 @@ img:hover {
 }
 
 .main-menu_item.active,
-.project.active,
+.project_item.active,
 .see-all.active {
   text-decoration: underline #fcaf01;
 }
