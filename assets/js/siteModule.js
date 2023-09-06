@@ -21,19 +21,23 @@ export async function loadSites() {
   }
 }
 
-export async function loadSiteDetails(siteId) {
+export async function loadSiteDetails(siteData) {
 
-  console.log('Je charge le bon site');
+  const response = await fetch(`${apiBaseUrl}/sites/${siteData.id}`);
 
-  // const response = await fetch(`${apiBaseUrl}/sites/${siteId}`);
+  if (response.ok) {
 
-  // if (response.ok) {
+    const site = await response.json();
 
-  //   const site = await response.json();
+    document.querySelector('.home').classList.add('is-hidden');
 
-  //   console.log(site);
+    console.log(site);
 
-  // }
+  } else {
+    
+    document.querySelectorAll('.notification').classList.remove('is-hidden');
+
+  }
 
 }
 

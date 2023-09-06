@@ -1,6 +1,6 @@
 import { loadSites } from './siteModule.js';
 import { toggleMainMenu } from './menuModule.js';
-import { closeNotification } from './utilsModule.js';
+import { closeNotification, showHomepage } from './utilsModule.js';
 
 function init() {
 
@@ -23,6 +23,9 @@ function listenUserActions() {
   document.querySelectorAll('.delete').forEach(deleteButton => {
     deleteButton.addEventListener('click', closeNotification);
   });
+
+  // Return to homepage
+  document.querySelector('.logo').addEventListener('click', showHomepage);
     
 }
 

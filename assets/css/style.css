@@ -175,13 +175,13 @@ img:hover {
   border: 2px solid #f8f8f8;
 }
 
-.main .col {
+/* .main .col {
   display: none;
-}
+} */
 
-.main .col.active {
+/* .main .col.active {
   display: block;
-}
+} */
 
 .home {
   margin-bottom: 3em;
@@ -302,7 +302,7 @@ footer .col.external_links {
   }
 
   img:hover {
-    width: 3.25em;
+    width: 3.125em;
   }
 
   .images.desktop {

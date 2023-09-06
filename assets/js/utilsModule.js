@@ -8,3 +8,9 @@ export async function closeNotification() {
 
   });
 }
+
+export function showHomepage() {
+
+  document.querySelector('.home').classList.remove('is-hidden');
+
+}
