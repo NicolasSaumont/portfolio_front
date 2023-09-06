@@ -1,4 +1,4 @@
-import { loadSites, loadSiteDetails } from './siteModule.js';
+import { loadSites } from './siteModule.js';
 import { toggleMainMenu } from './menuModule.js';
 
 function init() {
@@ -17,18 +17,6 @@ function listenUserActions() {
     menuItem.addEventListener('click', toggleMainMenu);
 
   });
-  
-  // Load site
-  // document.querySelectorAll('.main-menu_item, .project_item').forEach(menuItem => {
-    
-  //   const siteObject = {
-  //     id: Number(menuItem.dataset.id)
-  //   };
-
-  //   menuItem.addEventListener('click', () => {
-  //     loadSiteDetails(siteObject.id);
-  //   });
-  // });
     
 }
 
