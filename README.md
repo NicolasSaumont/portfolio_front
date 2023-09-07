@@ -124,14 +124,14 @@ Please visit https://www.portfolio.nicolassaumont.com or click on [this link](ht
 
 
 - [x] Homepage
-  - [ ] Show projects
-  - [ ] Show each site
+  - [x] Show projects
+  - [x] Show each site
     - [x] Show title
     - [x] Show description
     - [x] Show technos
     - [x] Show links
-    - [ ] Show pictures 
-      - [ ] On desktop
+    - [x] Show pictures 
+      - [x] On desktop
       - [x] On mobile
 - [ ] List of sites
 - [ ] Site's détails

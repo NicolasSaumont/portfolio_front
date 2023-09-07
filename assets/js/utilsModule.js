@@ -1,4 +1,4 @@
-import { deleteSiteDetailsTemplate } from './siteModule.js';
+import { deleteSiteDetailsTemplate, deletePictures } from './siteModule.js';
 
 export const apiBaseUrl = 'http://localhost:3000';
 
@@ -14,6 +14,8 @@ export async function closeNotification() {
 export function showHomepage() {
 
   deleteSiteDetailsTemplate();
+
+  deletePictures();
 
   document.querySelector('.home').classList.remove('is-hidden');
 

@@ -97,9 +97,9 @@ function addSiteNameToDom(siteData) {
 
 function addSiteDetailsToDom(siteData) {
 
-  console.log(siteData);
-
   deleteSiteDetailsTemplate();
+
+  deletePictures();
 
   const siteDetailsTemplate = document.getElementById('site-details-template');
 
@@ -171,16 +171,20 @@ function addSiteDetailsToDom(siteData) {
     
   }
 
+  // - on desktop
+  for (let index = 0; index < siteData.picturesFromSite.length; index++) {
 
+    const image = document.createElement('img');
 
+    image.src = `./assets/img/${siteData.picturesFromSite[index].name}.png`;
 
-  // cloneSiteDetails.querySelector('[slot="site-link"]').addEventListener('click', () => {
-  //   loadSiteDetails(siteData);
-  // });
+    image.classList.add('site-picture-desktop');
 
-  // cloneSiteDetails.querySelector('[slot="site-githublink"]').addEventListener('click', () => {
-  //   loadSiteDetails(siteData);
-  // });
+    image.alt = `picture of the site ${siteData.name}`;
+
+    document.querySelector('.images .row').append(image);
+      
+  }
 
   // Finalize insertion
   const referenceNode = document.querySelector('.home');
@@ -195,6 +199,21 @@ export function deleteSiteDetailsTemplate() {
 
   if (siteDetailsTemplatesToDelete) {
     siteDetailsTemplatesToDelete.remove();
+  }
+
+}
+
+export function deletePictures() {
+
+  const picturesToDelete = document.querySelectorAll('.site-picture-desktop');
+
+  if (picturesToDelete) {
+
+    picturesToDelete.forEach(picture => {
+      
+      picture.remove();
+
+    });
   }
 
 }
