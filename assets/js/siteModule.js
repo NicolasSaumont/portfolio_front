@@ -99,4 +99,39 @@ function addSiteDetailsToDom(siteData) {
 
   console.log('Je vais ajouter les détails du site');
 
+  deleteSiteDetailsTemplate();
+
+  const siteDetailsTemplate = document.getElementById('site-details-template');
+
+  const cloneSiteDetails = siteDetailsTemplate.content.cloneNode(true);
+
+  // cloneSiteDetails.querySelector('[slot="site-id"]').dataset.id = siteData.id; 
+  cloneSiteDetails.querySelector('[slot="site-name"]').textContent = siteData.name;
+  cloneSiteDetails.querySelector('[slot="site-description"]').textContent = siteData.description;
+  // cloneSiteDetails.querySelector('[slot="site-technos"]').textContent = siteData.description;
+  // cloneSiteDetails.querySelector('[slot="site-link"]').textContent = siteData.description;
+  // cloneSiteDetails.querySelector('[slot="site-githublink"]').textContent = siteData.description;
+
+  // cloneSiteDetails.querySelector('[slot="site-link"]').addEventListener('click', () => {
+  //   loadSiteDetails(siteData);
+  // });
+
+  // cloneSiteDetails.querySelector('[slot="site-githublink"]').addEventListener('click', () => {
+  //   loadSiteDetails(siteData);
+  // });
+
+  const referenceNode = document.querySelector('.home');
+
+  document.querySelector('.main .row').prepend(cloneSiteDetails, referenceNode);
+
+}
+
+export function deleteSiteDetailsTemplate() {
+
+  const siteDetailsTemplatesToDelete = document.querySelector('#site-details');
+
+  if (siteDetailsTemplatesToDelete) {
+    siteDetailsTemplatesToDelete.remove();
+  }
+
 }
