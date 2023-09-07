@@ -155,16 +155,16 @@ function addSiteDetailsToDom(siteData) {
   // - on mobile mode
   for (let index = 0; index < siteData.picturesFromSite.length; index++) {
 
+    const image = document.createElement('img');
+    image.src = `./assets/img/${siteData.picturesFromSite[index].name}.png`;
+    image.alt = `picture of the site ${siteData.name}`;
+
     if (index === 0) {
 
-      const image = document.createElement('img');
-      image.src = `./assets/img/${siteData.picturesFromSite[index].name}.png`;
       cloneSiteDetails.querySelector('[slot="first-picture"]').append(image);
 
     } else {
 
-      const image = document.createElement('img');
-      image.src = `./assets/img/${siteData.picturesFromSite[index].name}.png`;
       cloneSiteDetails.querySelector('[slot="other-pictures"]').append(image);
 
     }
