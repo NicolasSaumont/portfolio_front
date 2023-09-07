@@ -41,9 +41,9 @@ export async function loadSiteDetails(siteData) {
 
     });
 
-    const siteData = await response.json();
+    const responseData = await response.json();
 
-    addSiteDetailsToDom(siteData);
+    addSiteDetailsToDom(responseData);
 
   } else {
     
@@ -97,6 +97,6 @@ function addSiteNameToDom(siteData) {
 
 function addSiteDetailsToDom(siteData) {
 
-  
+  console.log('Je vais ajouter les détails du site');
 
 }
