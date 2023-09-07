@@ -103,7 +103,7 @@ function addSiteDetailsToDom(siteData) {
 
   const cloneSiteDetails = siteDetailsTemplate.content.cloneNode(true);
 
-  console.log(siteData.technosFromSite);
+  console.log(siteData);
 
   cloneSiteDetails.querySelector('[slot="site-id"]').dataset.id = siteData.id; 
   cloneSiteDetails.querySelector('[slot="site-name"]').textContent = siteData.name;
@@ -114,7 +114,37 @@ function addSiteDetailsToDom(siteData) {
     cloneSiteDetails.querySelector('[slot="site-technos"]').append(`#${techno.name} `);
 
   });
-  // cloneSiteDetails.querySelector('[slot="site-link"]').textContent = siteData.description;
+
+  // Insert to DOM the site link
+  if (siteData.site_link !== null) {
+
+    const linkToSite = document.createElement('a');
+  
+    linkToSite.href = siteData.site_link;
+  
+    linkToSite.textContent = 'View site ';
+  
+    linkToSite.classList.add('external_link');
+  
+    cloneSiteDetails.querySelector('[slot="site-links"]').append(linkToSite);
+
+  }
+
+  // Insert to DOM the github link
+  if (siteData.github_link !== null) {
+
+    const linkToGithub = document.createElement('a');
+
+    linkToGithub.href = siteData.github_link;
+
+    linkToGithub.textContent = 'Github';
+
+    linkToGithub.classList.add('external_link');
+
+    cloneSiteDetails.querySelector('[slot="site-links"]').append(linkToGithub);
+
+  }
+
   // cloneSiteDetails.querySelector('[slot="site-githublink"]').textContent = siteData.description;
 
   // cloneSiteDetails.querySelector('[slot="site-link"]').addEventListener('click', () => {
