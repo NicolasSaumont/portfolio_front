@@ -131,6 +131,8 @@ Please visit https://www.portfolio.nicolassaumont.com or click on [this link](ht
     - [x] Show technos
     - [x] Show links
     - [ ] Show pictures 
+      - [ ] On desktop
+      - [x] On mobile
 - [ ] List of sites
 - [ ] Site's détails
 - [ ] Back office

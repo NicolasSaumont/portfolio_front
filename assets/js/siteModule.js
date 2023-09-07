@@ -97,18 +97,24 @@ function addSiteNameToDom(siteData) {
 
 function addSiteDetailsToDom(siteData) {
 
+  console.log(siteData);
+
   deleteSiteDetailsTemplate();
 
   const siteDetailsTemplate = document.getElementById('site-details-template');
 
   const cloneSiteDetails = siteDetailsTemplate.content.cloneNode(true);
 
-  console.log(siteData);
-
+  // Insert to DOM the site id
   cloneSiteDetails.querySelector('[slot="site-id"]').dataset.id = siteData.id; 
+
+  // Insert to DOM the site name
   cloneSiteDetails.querySelector('[slot="site-name"]').textContent = siteData.name;
+
+  // Insert to DOM the site description
   cloneSiteDetails.querySelector('[slot="site-description"]').textContent = siteData.description;
 
+  // Insert to DOM the site technos
   siteData.technosFromSite.forEach(techno => {
     
     cloneSiteDetails.querySelector('[slot="site-technos"]').append(`#${techno.name} `);
@@ -145,7 +151,28 @@ function addSiteDetailsToDom(siteData) {
 
   }
 
-  // cloneSiteDetails.querySelector('[slot="site-githublink"]').textContent = siteData.description;
+  // Insert to DOM the site pictures
+  // - on mobile mode
+  for (let index = 0; index < siteData.picturesFromSite.length; index++) {
+
+    if (index === 0) {
+
+      const image = document.createElement('img');
+      image.src = `./assets/img/${siteData.picturesFromSite[index].name}.png`;
+      cloneSiteDetails.querySelector('[slot="first-picture"]').append(image);
+
+    } else {
+
+      const image = document.createElement('img');
+      image.src = `./assets/img/${siteData.picturesFromSite[index].name}.png`;
+      cloneSiteDetails.querySelector('[slot="other-pictures"]').append(image);
+
+    }
+    
+  }
+
+
+
 
   // cloneSiteDetails.querySelector('[slot="site-link"]').addEventListener('click', () => {
   //   loadSiteDetails(siteData);
@@ -155,6 +182,7 @@ function addSiteDetailsToDom(siteData) {
   //   loadSiteDetails(siteData);
   // });
 
+  // Finalize insertion
   const referenceNode = document.querySelector('.home');
 
   document.querySelector('.main .row').prepend(cloneSiteDetails, referenceNode);
