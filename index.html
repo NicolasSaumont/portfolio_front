@@ -77,44 +77,13 @@
           </div>
         </div>
 
-        <div class="col project project--cv_adventure is-hidden">
-          <h4>CV Adventure</h4>
-
-          <div class="project-presentation">
-            <div class="images mobile">
-              <div class="row cv_adventure--images">
-                <img src="./assets/img/cv_adventure--image-1.png" alt="first illustration of the site cv adventure">
-              </div>
-            </div>
-
-            <p>Discover my career path in a playful way thanks to this innovative <strong>CV site</strong>: a retro arcade game experience that lets you navigate through the different stages of my career while having fun. </p>
-            <br>
-            <p>Immerse yourself in this unique experience of discovering a web developer in search of opportunities, while exploring my background and skills.</p>
-            <br>
-            <p><strong>***Warning: this website is not suitable for mobile phones and tablets yet***</strong></p>
-            
-            <ul class="technos">
-              <li class="techno">#html</li>
-              <li class="techno">#css</li>
-              <li class="techno">#javascript</li>
-              <li class="techno">#nodejs</li>
-              <li class="techno">#express</li>
-            </ul>
-            <div class="external_links">
-              <a href="https://cv-adventure.nicolassaumont.com/" class="external_link" target="_blank"><p>View Site</p></a>
-              <a href="https://github.com/NicolasSaumont/cv_adventure" class="external_link" target="_blank"><p>Github</p></a>
-            </div>
-
-            <div class="images mobile">
-              <div class="row mystical_forest--images">
-                <img src="./assets/img/cv_adventure--image-2.png" alt="second illustration of the site cv adventure">
-                <img src="./assets/img/cv_adventure--image-3.png" alt="third illustration of the site cv adventure">
-              </div>
-            </div>
-          </div>
-        </div>
-
+            <!-- 
+              Site_details template goes here 
+            -->
         
+            <!-- 
+              Sites_card templates goes here 
+            -->
 
         <div class="col spacer desktop"></div>
 
@@ -171,7 +140,7 @@
   <div id="site-details" class="col project" slot="site-id">
     <h4 class="site-name" slot="site-name">
       <!-- 
-        First image goes here 
+        Name goes here 
       -->
     </h4>
 
@@ -213,6 +182,32 @@
       </div>
     </div>
   </div>
+</template>
+
+<!-- Template Site card -->
+<template id="site-card-template">
+  <article class="col card" slot="site-card-id">
+    <h4 class="site-name" slot="site-card-name">
+      <!-- 
+        Name goes here 
+      -->
+    </h4>
+
+    <ul class="technos" slot="site-card-technos">
+      <!-- 
+        Technos goes here 
+      -->
+    </ul>
+
+    <div class="row" slot="site-card-picture">
+      <!-- 
+        Picture goes here 
+      -->
+    </div>
+
+    <button class="show-more-btn">See details</button>
+      
+  </article>
 </template>
 
 

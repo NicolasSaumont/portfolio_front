@@ -1,24 +1,41 @@
 import { apiBaseUrl, hideHomepage } from './utilsModule.js';
 import { toggleMainMenu } from './menuModule.js';
 
-export async function loadSites() {
+export async function loadSites(firstLoading) {
 
-  const response = await fetch(`${apiBaseUrl}/sites`);
-
-  if (response.ok) {
-
-    const sites = await response.json();
   
-    sites.forEach(site => {
-
-      addSiteNameToDom(site);
-
-    });
-  } else {
+  const response = await fetch(`${apiBaseUrl}/sites`);
+  
+  if (response.ok) {
     
+    const sites = await response.json();
+
+    if (firstLoading) {
+    
+      sites.forEach(site => {
+          
+        addSiteNameToDom(site);
+          
+      });
+  
+    } else {
+
+      sites.forEach(site => {
+          
+        addListSitesToDom(site);
+          
+      });
+
+    }
+
+    return sites;
+  
+  } else {
+      
     document.querySelectorAll('.notification').classList.remove('is-hidden');
 
   }
+  
 }
 
 export async function loadSiteDetails(siteData) {
@@ -190,6 +207,18 @@ function addSiteDetailsToDom(siteData) {
   const referenceNode = document.querySelector('.home');
 
   document.querySelector('.main .row').prepend(cloneSiteDetails, referenceNode);
+
+}
+
+export function addListSitesToDom() {
+  
+  console.log('Les sites ont été chargées dans la liste');
+
+  deleteSiteDetailsTemplate();
+
+  deletePictures();
+
+  hideHomepage();
 
 }
 
