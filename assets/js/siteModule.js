@@ -37,6 +37,9 @@ export async function loadSites(firstLoading) {
 
       });
 
+      document.querySelector('.images.desktop').classList.add('is-hidden');
+      document.querySelector('.projects.desktop').classList.add('is-hidden');
+
       sites.forEach(site => {
           
         addListSitesToDom(site);
@@ -227,27 +230,39 @@ function addSiteDetailsToDom(siteData) {
 
 }
 
-export function addListSitesToDom() {
+export function addListSitesToDom(siteData) {
   
   console.log('Les sites ont été chargées dans la liste');
 
-  
+  const siteCardTemplate = document.getElementById('site-card-template');
 
-  // const siteCardTemplate = document.getElementById('project_item-template');
+  const cloneSiteCard = siteCardTemplate.content.cloneNode(true);
 
-  // const cloneProjectMenuItem = projectMenuItemTemplate.content.cloneNode(true);
+  // Insert to DOM the site id
+  cloneSiteCard.querySelector('[slot="site-card-id"]').dataset.id = siteData.id; 
 
-  // cloneProjectMenuItem.querySelector('[slot="site-name"]').textContent = siteData.name;
-  // cloneProjectMenuItem.querySelector('[slot="site-id"]').dataset.id = siteData.id; 
+  // Insert to DOM the site name
+  cloneSiteCard.querySelector('[slot="site-card-name"]').textContent = siteData.name;
 
-  // cloneProjectMenuItem.querySelector('[slot="site-name"]').addEventListener('click', () => {
-  //   loadSiteDetails(siteData);
-  // });
+  // Insert to DOM the site technos
+  siteData.technosFromSite.forEach(techno => {
+    
+    cloneSiteCard.querySelector('[slot="site-card-technos"]').append(`#${techno.name} `);
 
-  // const desktopReferenceNode = document.querySelector('.projects.desktop .see-all');
+  });
 
-  // document.querySelector('.project-items').append(cloneProjectMenuItem, desktopReferenceNode);
+  // Insert to DOM the site picture
+  for (let index = 0; index < 1; index++) {
 
+    const image = document.createElement('img');
+    image.src = `./assets/img/${siteData.picturesFromSite[index].name}.png`;
+    image.alt = `picture of the site ${siteData.name}`;
+
+    cloneSiteCard.querySelector('[slot="site-card-picture"]').append(image);
+    
+  }
+
+  document.querySelector('.sites-list').append(cloneSiteCard);
 
 }
 
@@ -272,6 +287,22 @@ export function deletePictures() {
       picture.remove();
 
     });
+  }
+
+}
+
+export function deleteSitesListTemplate() {
+
+  const sitesCardsTemplatesToDelete = document.querySelectorAll('.site-card');
+
+  if (sitesCardsTemplatesToDelete) {
+
+    sitesCardsTemplatesToDelete.forEach(sitesCardTemplatesToDelete => {
+      
+      sitesCardTemplatesToDelete.remove();
+
+    });
+
   }
 
 }

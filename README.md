@@ -133,8 +133,8 @@ Please visit https://www.portfolio.nicolassaumont.com or click on [this link](ht
     - [x] Show pictures 
       - [x] On desktop
       - [x] On mobile
-- [ ] List of sites
-- [ ] Site's détails
+- [x] List of sites
+- [ ] Site's details
 - [ ] Back office
   - [ ] Create new website
   - [ ] Edit website
