@@ -43,6 +43,11 @@ export async function loadSites(firstLoading) {
       sites.forEach(site => {
           
         addListSitesToDom(site);
+
+        // Listener on details button
+        document.querySelector(`[data-id="${site.id}"] .show-more-btn`).addEventListener('click',() => {
+          loadSiteDetails(site);
+        });
           
       });
 
@@ -77,6 +82,11 @@ export async function loadSiteDetails(siteData) {
       name.classList.add('active');
 
     });
+
+    deleteSitesListTemplate();
+
+    document.querySelector('.projects.desktop').classList.remove('is-hidden');
+    document.querySelector('.images.desktop').classList.remove('is-hidden');
 
     const responseData = await response.json();
 
@@ -232,8 +242,6 @@ function addSiteDetailsToDom(siteData) {
 
 export function addListSitesToDom(siteData) {
   
-  console.log('Les sites ont été chargées dans la liste');
-
   const siteCardTemplate = document.getElementById('site-card-template');
 
   const cloneSiteCard = siteCardTemplate.content.cloneNode(true);
@@ -261,8 +269,11 @@ export function addListSitesToDom(siteData) {
     cloneSiteCard.querySelector('[slot="site-card-picture"]').append(image);
     
   }
-
+  
   document.querySelector('.sites-list').append(cloneSiteCard);
+  
+
+
 
 }
 
