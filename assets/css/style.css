@@ -237,12 +237,12 @@ footer .col.external_links {
   .images.desktop img {
     width: 30%;
     min-width: 9.7em;
-    margin: 0;
+    margin: 0.5em;
   }
 
-  .images.desktop .row {
+  /* .images.desktop .row {
     display: none;
-  }
+  } */
 
   .images.desktop .row.active {
     display: flex;
@@ -273,6 +273,10 @@ footer .col.external_links {
 ******************************************/
 
 @media (min-width:900px) {
+
+  body {
+    height: 100vh;
+  }
 
   .mobile {
     display: none;
