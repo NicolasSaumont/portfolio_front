@@ -2,7 +2,6 @@ import { apiBaseUrl, hideHomepage } from './utilsModule.js';
 import { toggleMainMenu } from './menuModule.js';
 
 export async function loadSites(firstLoading) {
-
   
   const response = await fetch(`${apiBaseUrl}/sites`);
   
@@ -19,6 +18,24 @@ export async function loadSites(firstLoading) {
       });
   
     } else {
+
+      deleteSiteDetailsTemplate();
+
+      deletePictures();
+
+      hideHomepage();
+
+      document.querySelectorAll('[slot="site-id"]').forEach(name => {
+
+        name.classList.remove('active');
+
+      });
+
+      document.querySelectorAll('.see-all').forEach(name => {
+
+        name.classList.add('active');
+
+      });
 
       sites.forEach(site => {
           
@@ -214,23 +231,23 @@ export function addListSitesToDom() {
   
   console.log('Les sites ont été chargées dans la liste');
 
-  deleteSiteDetailsTemplate();
+  
 
-  deletePictures();
+  // const siteCardTemplate = document.getElementById('project_item-template');
 
-  hideHomepage();
+  // const cloneProjectMenuItem = projectMenuItemTemplate.content.cloneNode(true);
 
-  document.querySelectorAll('[slot="site-id"]').forEach(name => {
+  // cloneProjectMenuItem.querySelector('[slot="site-name"]').textContent = siteData.name;
+  // cloneProjectMenuItem.querySelector('[slot="site-id"]').dataset.id = siteData.id; 
 
-    name.classList.remove('active');
+  // cloneProjectMenuItem.querySelector('[slot="site-name"]').addEventListener('click', () => {
+  //   loadSiteDetails(siteData);
+  // });
 
-  });
+  // const desktopReferenceNode = document.querySelector('.projects.desktop .see-all');
 
-  document.querySelectorAll('.see-all').forEach(name => {
+  // document.querySelector('.project-items').append(cloneProjectMenuItem, desktopReferenceNode);
 
-    name.classList.add('active');
-
-  });
 
 }
 

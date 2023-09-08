@@ -31,7 +31,13 @@ function listenUserActions() {
 
   // See all sites
   document.querySelectorAll('.see-all').forEach(seeAllButton => {
-    seeAllButton.addEventListener('click', addListSitesToDom);
+    seeAllButton.addEventListener('click', () => {
+
+      const firstLoading = false;
+
+      loadSites(firstLoading);
+      
+    }); 
   });
     
 }
