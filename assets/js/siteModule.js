@@ -46,7 +46,7 @@ export async function loadSiteDetails(siteData) {
 
     hideHomepage();
 
-    document.querySelectorAll('[slot="site-id"]').forEach(name => {
+    document.querySelectorAll('[slot="site-id"], .see-all').forEach(name => {
 
       name.classList.remove('active');
 
@@ -219,6 +219,18 @@ export function addListSitesToDom() {
   deletePictures();
 
   hideHomepage();
+
+  document.querySelectorAll('[slot="site-id"]').forEach(name => {
+
+    name.classList.remove('active');
+
+  });
+
+  document.querySelectorAll('.see-all').forEach(name => {
+
+    name.classList.add('active');
+
+  });
 
 }
 
