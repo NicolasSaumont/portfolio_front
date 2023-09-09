@@ -1,4 +1,4 @@
-import { apiBaseUrl, hideHomepage } from './utilsModule.js';
+import { apiBaseUrl, hideHomepage, hideProjects, showProjects, hideImages, showImages } from './utilsModule.js';
 import { toggleMainMenu } from './menuModule.js';
 
 export async function loadSites(firstLoading) {
@@ -37,8 +37,9 @@ export async function loadSites(firstLoading) {
 
       });
 
-      document.querySelector('.images.desktop').classList.add('is-hidden');
-      document.querySelector('.projects.desktop').classList.add('is-hidden');
+      hideProjects();
+
+      hideImages();
 
       sites.forEach(site => {
           
@@ -85,8 +86,9 @@ export async function loadSiteDetails(siteData) {
 
     deleteSitesListTemplate();
 
-    document.querySelector('.projects.desktop').classList.remove('is-hidden');
-    document.querySelector('.images.desktop').classList.remove('is-hidden');
+    showProjects();
+
+    showImages();
 
     const responseData = await response.json();
 
@@ -271,9 +273,6 @@ export function addListSitesToDom(siteData) {
   }
   
   document.querySelector('.sites-list').append(cloneSiteCard);
-  
-
-
 
 }
 

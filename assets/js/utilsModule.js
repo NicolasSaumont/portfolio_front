@@ -19,9 +19,11 @@ export function showHomepage() {
 
   deleteSitesListTemplate();
 
+  showProjects();
+  
+  showImages();
+
   document.querySelector('.home').classList.remove('is-hidden');
-  document.querySelector('.projects.desktop').classList.remove('is-hidden');
-  document.querySelector('.images.desktop').classList.remove('is-hidden');
 
   document.querySelectorAll('[slot="site-id"]').forEach(name => {
 
@@ -40,5 +42,29 @@ export function showHomepage() {
 export function hideHomepage() {
 
   document.querySelector('.home').classList.add('is-hidden');
+
+}
+
+export function showProjects() {
+
+  document.querySelector('.projects.desktop').classList.remove('is-hidden');
+
+}
+
+export function hideProjects() {
+
+  document.querySelector('.projects.desktop').classList.add('is-hidden');
+
+}
+
+export function showImages() {
+
+  document.querySelector('.images.desktop').classList.remove('is-hidden');
+
+}
+
+export function hideImages() {
+
+  document.querySelector('.images.desktop').classList.add('is-hidden');
 
 }

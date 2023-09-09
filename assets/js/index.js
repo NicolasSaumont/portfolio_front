@@ -1,4 +1,4 @@
-import { loadSites, addListSitesToDom } from './siteModule.js';
+import { loadSites } from './siteModule.js';
 import { toggleMainMenu } from './menuModule.js';
 import { closeNotification, showHomepage } from './utilsModule.js';
 
