@@ -26,6 +26,10 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  color: #f8f8f8;
+}
+
 strong {
   font-weight: 300;
   color: #fcaf01;
