@@ -1,6 +1,7 @@
 import { deleteSiteDetailsTemplate, deletePictures, deleteSitesListTemplate } from './siteModule.js';
 
-export const apiBaseUrl = 'https://portfolio-back.nicolassaumont.com';
+export const apiBaseUrl = 'https://portfolio-back.nicolassaumont.com/';
+// export const apiBaseUrl = 'http://localhost:3000';
 
 export async function closeNotification() {
 

@@ -15,7 +15,7 @@ function init() {
 function listenUserActions() {
   
   // Toggle mobile main menu
-  document.querySelectorAll('.main-menu_item, .main-menu_icons').forEach(menuItem => {
+  document.querySelectorAll('.main-menu_item, .main-menu_icons, .see-all').forEach(menuItem => {
     
     menuItem.addEventListener('click', toggleMainMenu);
 

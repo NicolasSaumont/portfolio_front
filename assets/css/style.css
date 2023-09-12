@@ -10,6 +10,7 @@ body {
   font-size: 16px;
   color: #f8f8f8;
   letter-spacing: 0.1em;
+  min-height: 100vh;
 }
 
 img {
