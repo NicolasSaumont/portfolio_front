@@ -140,6 +140,10 @@ function addSiteNameToDom(siteData) {
 
     document.querySelector('.main-menu_items').append(cloneMainMenuItem, mobileReferenceNode);
 
+    // Remove loading elements
+    document.querySelector('.loading').classList.add('is-hidden');
+    document.querySelector('.images.desktop').classList.remove('is-hidden');
+
   }
 
 }

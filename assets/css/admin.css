@@ -75,14 +75,6 @@ h4 {
   text-align: center;
 }
 
-.loading {
-  margin: 2em auto;
-}
-
-.loading-element:first-child {
-  width: 100px;
-}
-
 .row {
   display: flex;
   justify-content: space-between;
@@ -92,6 +84,10 @@ h4 {
 
 .main_title {
   display: none;
+}
+
+header {
+  margin-bottom: 5em;
 }
 
 header img,
@@ -111,67 +107,6 @@ footer img {
   display: none;
 }
 
-.menu-projects {
-  position: relative;
-  z-index: 20;
-  color: #fcaf01;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-.menu-projects.close {
-  display: none;
-}
-
-.toggle_menu_on .menu-projects.open {
-  display: none;
-}
-
-.toggle_menu_on .menu-projects.close {
-  display: block;
-}
-
-.mobile.projects {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  flex-direction: column;
-  padding: 2em;
-  justify-content: space-around;
-  transform: translateX(-100%);
-  transition: transform 1s;
-  opacity: 0.97;
-  background-color: #242524;
-  border: 1px solid #f8f8f8;
-  border-radius: 5px;
-}
-
-.toggle_menu_on .mobile.projects {
-  transform: translateX(0%);
-}
-
-.main-menu_item,
-.project_item,
-.see-all {
-  margin: 1.5em 0;
-}
-
-.main-menu_item:hover:not(.active),
-.project_item:hover:not(.active),
-.see-all:hover:not(.active) {
-  letter-spacing: 0.15em;
-  text-decoration: underline #d33f49;
-  cursor: pointer;
-}
-
-.main-menu_item.active,
-.project_item.active,
-.see-all.active {
-  text-decoration: underline #fcaf01;
-}
-
 .images .row {
   display: block;
 }
@@ -183,16 +118,43 @@ footer img {
   border: 2px solid #f8f8f8;
 }
 
-/* .main .col {
-  display: none;
-} */
-
-/* .main .col.active {
-  display: block;
-} */
-
-.home {
+.login {
   margin-bottom: 3em;
+}
+
+.table {
+  min-width: 350px;
+  margin: 0 auto;
+}
+
+.table th,
+.table thead th, 
+.table tfoot th {
+  color: #fcaf01;
+}
+
+.table th:last-child {
+  width: 40px;
+}
+
+.table a {
+  color: #242524;
+}
+
+.fas {
+  cursor: pointer;
+}
+
+.fas:first-child {
+  margin-right: 0.2em;
+}
+
+.fa-trash {
+  color: #9c1616;
+}
+
+.fa-pen {
+  color: #0d820f;
 }
 
 .sites-list {
@@ -408,7 +370,7 @@ footer .col.external_links {
     text-align: left;
   }
 
-  .home,
+  .login,
   .project {
     width: 60%;
   }

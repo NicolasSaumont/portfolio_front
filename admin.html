@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/admin.css">
+
+  <title>Portfolio</title>
+</head>
+<body>
+  <div class="container">
+
+    <h1 class="main_title">Portfolio Nicolas Saumont | Administration</h1>
+
+    <header>
+        <div class="row">
+          <div class="col logo">
+            <img src="./assets/img/logo.png" alt="logo nicolas saumont">
+          </div>
+          
+          <div class="col external_links desktop">
+            <a href="https://github.com/NicolasSaumont" class="external_link" target="_blank"><img src="./assets/img/github.png" alt="logo github"></a>
+            <a href="https://www.linkedin.com/in/nicolas-saumont/" class="external_link" target="_blank"><img src="./assets/img/linkedin.png" alt="logo linkedin"></a>
+          </div>
+        </div>
+
+        <div class="notification is-danger is-light is-hidden">
+          <button class="delete"></button>
+          <p>Ooops, petit souci côté serveur !</p>
+        </div>
+
+    </header>
+
+    <section class="main">
+        <h2>Admin page</h2>
+        <div class="col login">
+
+          <form action="POST" class="login-form">
+            <div class="field">
+              <p class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  <i class="fas fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control has-icons-left">
+                <input class="input" type="password" placeholder="Password">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <p class="control">
+                <button id="login-btn" class="button is-warning">
+                  Se connecter
+                </button>
+              </p>
+            </div>
+          </form>
+
+        </div>
+
+        <table class="table site-list-table is-bordered is-striped is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Site</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Id</th>
+              <th>Site</th>
+              <th></th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>CV Adventure</td>
+              <td>
+                <span class="icon">
+                  <abbr title="Editer"><i class="fas fa-pen"></i></abbr>
+                  <abbr title="Supprimer"><i class="fas fa-trash"></i></abbr>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>Mystical Forest</td>
+              <td>
+                <span class="icon">
+                  <abbr title="Editer"><i class="fas fa-pen"></i></abbr>
+                  <abbr title="Supprimer"><i class="fas fa-trash"></i></abbr>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>Memory Game</td>
+              <td>
+                <span class="icon">
+                  <abbr title="Editer"><i class="fas fa-pen"></i></abbr>
+                  <abbr title="Supprimer"><i class="fas fa-trash"></i></abbr>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>4</th>
+              <td>Ezee</td>
+              <td>
+                <span class="icon">
+                  <abbr title="Editer"><i class="fas fa-pen"></i></abbr>
+                  <abbr title="Supprimer"><i class="fas fa-trash"></i></abbr>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+          <!-- 
+            Site_details template goes here 
+          -->
+
+        <div id="sites-list" class="sites-list">
+          
+          <!-- 
+            Sites_card templates goes here 
+          -->
+
+        </div>
+
+    </section>
+
+    <footer>
+      <div class="row">
+        <div class="col">
+          <p>©2023, Nicolas Saumont. <a href="https://nicolassaumont.com/" target="_blank">nicolassaumont.com</a></p>
+        </div>
+        <div class="col external_links mobile">
+            <a href="https://github.com/NicolasSaumont" class="external_link" target="_blank"><img src="./assets/img/github.png" alt="logo github"></a>
+            <a href="https://www.linkedin.com/in/nicolas-saumont-241422117/" class="external_link" target="_blank"><img src="./assets/img/linkedin.png" alt="logo linkedin"></a>
+          </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="./assets/js/admin.js" type="module"></script>
+  
+</body>
+
+<!-- Template Site list -->
+<template id="site-list-template">
+  <div id="site-list" class="col project" slot="site-id">
+    <h4 class="site-name" slot="site-name">
+      <!-- 
+        Name goes here 
+      -->
+    </h4>
+
+    <div class="project-presentation">
+      <div class="images mobile">
+        <div class="row" slot="first-picture">
+          <!-- 
+            First picture goes here 
+          -->
+        </div>
+      </div>
+
+      <p class="site-description" slot="site-description">
+        <!-- 
+          Description goes here 
+        -->
+      </p>
+      
+      <ul class="technos" slot="site-technos">
+        <!-- 
+          Technos goes here 
+        -->
+      </ul>
+      <div class="external_links" slot="site-links">
+        <!-- 
+          Site_link goes here 
+        -->
+        <!-- 
+          Github_link goes here 
+        -->
+      </div>
+
+      <div class="images mobile">
+        <div class="row" slot="other-pictures">
+          <!-- 
+            Last two pictures goes here 
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- Template Site card -->
+<template id="site-card-template">
+  <article class="col site-card" slot="site-card-id">
+    <h4 class="site-name" slot="site-card-name">
+      <!-- 
+        Name goes here 
+      -->
+    </h4>
+
+    <ul class="technos" slot="site-card-technos">
+      <!-- 
+        Technos goes here 
+      -->
+    </ul>
+
+    <div class="row" slot="site-card-picture">
+      <!-- 
+        Picture goes here 
+      -->
+    </div>
+
+    <button class="show-more-btn">See details</button>
+      
+  </article>
+</template>
+
+
+</html>
+

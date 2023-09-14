@@ -17,47 +17,57 @@
 <body>
   <div class="container">
 
+    
     <h1 class="main_title">Portfolio Nicolas Saumont</h1>
-
+    
     <header>
-        <div class="row">
-          <div class="col logo">
-            <img src="./assets/img/logo.png" alt="logo nicolas saumont">
-          </div>
-          <div class="col mobile">
-            <div id="main-menu">
-              <div class="toggle main-menu_icons">
-                <i class="fa-solid fa-bars menu-projects open"></i>
-                <i class="fa-regular fa-circle-xmark menu-projects close"></i>
-              </div>
-              <nav class="projects mobile">
-                <h3>Projects</h3>
-                <ul class="main-menu_items">
-
-                  <!-- 
-                    Main-menu_item template goes here 
-                  -->
-
-                </ul>
-                <p class="see-all">See all</p>
-              </nav>
+      <div class="row">
+        <div class="col logo">
+          <img src="./assets/img/logo.png" alt="logo nicolas saumont">
+        </div>
+        
+        <div class="col mobile">
+          <div id="main-menu">
+            <div class="toggle main-menu_icons">
+              <i class="fa-solid fa-bars menu-projects open"></i>
+              <i class="fa-regular fa-circle-xmark menu-projects close"></i>
             </div>
-          </div>
-          <div class="col external_links desktop">
-            <a href="https://github.com/NicolasSaumont" class="external_link" target="_blank"><img src="./assets/img/github.png" alt="logo github"></a>
-            <a href="https://www.linkedin.com/in/nicolas-saumont/" class="external_link" target="_blank"><img src="./assets/img/linkedin.png" alt="logo linkedin"></a>
+            <nav class="projects mobile">
+              <h3>Projects</h3>
+              <ul class="main-menu_items">
+
+                <!-- 
+                  Main-menu_item template goes here 
+                -->
+
+              </ul>
+              <p class="see-all">See all</p>
+            </nav>
           </div>
         </div>
-
-        <div class="notification is-danger is-light is-hidden">
-          <button class="delete"></button>
-          <p>Ooops, petit souci côté serveur !</p>
+        <div class="col external_links desktop">
+          <a href="https://github.com/NicolasSaumont" class="external_link" target="_blank"><img src="./assets/img/github.png" alt="logo github"></a>
+          <a href="https://www.linkedin.com/in/nicolas-saumont/" class="external_link" target="_blank"><img src="./assets/img/linkedin.png" alt="logo linkedin"></a>
         </div>
+      </div>
 
+      <div class="notification is-danger is-light is-hidden">
+        <button class="delete"></button>
+        <p>Ooops, petit souci côté serveur !</p>
+      </div>
+
+      
     </header>
-
-    <section class="images desktop">
-
+    
+    <div class="row">
+      <div class="loading">
+        <img class="loading-element" src="./assets/img/sonic_waiting.gif" alt="sonic is waiting">
+        <img class="loading-element" src="./assets/img/loading.gif" alt="data is loading">
+      </div>
+    </div>
+    
+    <section class="images desktop is-hidden">
+      
       <div class="row">
         <!-- 
           Pictures goes here 
