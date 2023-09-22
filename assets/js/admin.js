@@ -8,6 +8,10 @@ function listenUserActions() {
   document.querySelectorAll('.delete').forEach((deleteButton) => {
     deleteButton.addEventListener('click', closeNotification);
   });
+
+  document.querySelectorAll('.login-form input').forEach((input) => {
+    input.addEventListener('click', closeNotification);
+  });
 }
 
 async function submitLogin(event) {
@@ -36,13 +40,13 @@ async function submitLogin(event) {
       const message = await response.json();
       console.log(message);
       document.querySelector('.login').classList.add('is-hidden');
+      userEmail.value = '';
+      userPassword.value = '';
     } else {
       const message = await response.json();
       console.log(message);
       openNotification();
     }
-    userEmail.value = '';
-    userPassword.value = '';
   } catch (error) {
     console.trace(error);
   }
