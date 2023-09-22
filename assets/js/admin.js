@@ -13,8 +13,8 @@ function listenUserActions() {
 async function submitLogin(event) {
   event.preventDefault(); // Empeche le refresh de la page
 
-  const userEmail = document.getElementById('userEmail');
-  const userPassword = document.getElementById('userPassword');
+  let userEmail = document.getElementById('userEmail');
+  let userPassword = document.getElementById('userPassword');
 
   const loginDatas = {
     userEmail: userEmail.value,
@@ -33,10 +33,15 @@ async function submitLogin(event) {
     });
 
     if (response.ok) {
-      console.log("L'utilisateur a pu se connecter");
+      const message = await response.json();
+      console.log(message);
     } else {
+      const message = await response.json();
+      console.log(message);
       openNotification();
     }
+    userEmail.value = '';
+    userPassword.value = '';
   } catch (error) {
     console.trace(error);
   }
