@@ -35,6 +35,7 @@ async function submitLogin(event) {
     if (response.ok) {
       const message = await response.json();
       console.log(message);
+      document.querySelector('.login').classList.add('is-hidden');
     } else {
       const message = await response.json();
       console.log(message);
