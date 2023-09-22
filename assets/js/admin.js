@@ -23,8 +23,6 @@ async function submitLogin(event) {
 
   const bodyJSON = JSON.stringify(loginDatas);
 
-  console.log(bodyJSON);
-
   try {
     const response = await fetch(`${apiBaseUrl}admin/login`, {
       method: 'POST',

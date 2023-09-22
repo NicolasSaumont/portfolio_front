@@ -105,10 +105,6 @@
           </form>
         </div>
 
-        <p class="error-message">
-          L'utilisateur ou le mot de passe est incorrect, merci de réessayer.
-        </p>
-
         <table
           class="table site-list-table is-bordered is-striped is-hoverable is-fullwidth"
         >
