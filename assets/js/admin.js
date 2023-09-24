@@ -1,5 +1,13 @@
 import { apiBaseUrl, openNotification, closeNotification } from './utilsModule';
 
+// window.addEventListener('load', () => {
+//   // Réinitialiser les champs du formulaire lorsque la page est chargée
+//   const userEmail = document.getElementById('userEmail');
+//   const userPassword = document.getElementById('userPassword');
+//   userEmail.value = '';
+//   userPassword.value = '';
+// });
+
 function listenUserActions() {
   // Submit du login form
   document.querySelector('.login-form').addEventListener('submit', submitLogin);
@@ -42,6 +50,9 @@ async function submitLogin(event) {
       document.querySelector('.login').classList.add('is-hidden');
       userEmail.value = '';
       userPassword.value = '';
+      setTimeout(() => {
+        checkSession();
+      }, 1000);
     } else {
       const message = await response.json();
       console.log(message);
@@ -52,5 +63,37 @@ async function submitLogin(event) {
   }
 }
 
+// Fonction pour vérifier si une session est ouverte
+function getSessionCookie() {
+  const cookies = document.cookie.split(';');
+  console.log(cookies);
+  for (const cookie of cookies) {
+    const [name, value] = cookie.trim().split('=');
+    console.log(cookie);
+    if (name === 'adminCookie') {
+      return value;
+    }
+  }
+  return null;
+}
+
+// Utilisation de la fonction pour vérifier si une session est ouverte
+export function checkSession() {
+  console.log('Je passe la 1');
+  const userToken = getSessionCookie(); // Utilisez une fonction pour récupérer le cookie de session
+  console.log('Je passe la 2');
+  console.log(userToken);
+  if (userToken) {
+    console.log('Je passe la 3');
+    console.log('La session est ouverte.');
+  } else {
+    console.log("La session n'est pas ouverte.");
+  }
+}
+
 // On rend effectif les branchements d'écouteurs d'event
-listenUserActions();
+
+document.addEventListener('DOMContentLoaded', () => {
+  checkSession();
+  listenUserActions();
+});
